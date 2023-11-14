@@ -1,0 +1,5 @@
+-- Query que retorna: Todos os clientes, cor de suas casas, seus bairros, seus carros
+
+SELECT cliente.nome AS 'Nome do cliente', casa.cor AS 'Cor da casa', bairro.nome 'Bairro', carro.modelo AS 'Carro' 
+FROM cliente, casa, bairro, carro
+WHERE cliente.id_cliente = casa.fk_cliente AND cliente.id_cliente = bairro.fk_cliente AND cliente.id_cliente = carro.fk_cliente ORDER BY cliente.id_cliente;
